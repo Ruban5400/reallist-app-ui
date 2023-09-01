@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reallist/splash_screen.dart';
+import 'package:reallist/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(191, 58, 74, 1)),
         useMaterial3: true,
       ),
-      home: const Splash(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
