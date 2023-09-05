@@ -1,8 +1,8 @@
-import 'dart:io';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:reallist/drawer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,12 +20,16 @@ class HomePageState extends State<HomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        drawer: Nav_Bar(),
         // AppBar - profile pic, profile name, notifications, app icon- log out
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(191, 58, 74, 1),
-          leading: IconButton(
-            icon: CircleAvatar(backgroundImage: NetworkImage("")),
-            onPressed: () {},
+          leading: Builder(builder: (context){
+            return IconButton(
+              icon: CircleAvatar(),
+              onPressed: () => Scaffold.of(context).openDrawer(),
+            );
+          },
           ),
           title: Text(
             'Reallist',
@@ -46,7 +50,8 @@ class HomePageState extends State<HomePage> {
                 width: 40,
               ),
               tooltip: 'Close application',
-              onPressed: () => exit(0),
+              onPressed: () => HomePage(),
+              // exit(0),
             ),
           ],
         ),
