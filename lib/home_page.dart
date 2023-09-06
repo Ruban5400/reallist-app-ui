@@ -1,8 +1,8 @@
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:reallist/drawer.dart';
+import 'package:reallist/home_page1.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,12 +24,13 @@ class HomePageState extends State<HomePage> {
         // AppBar - profile pic, profile name, notifications, app icon- log out
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(191, 58, 74, 1),
-          leading: Builder(builder: (context){
-            return IconButton(
-              icon: CircleAvatar(),
-              onPressed: () => Scaffold.of(context).openDrawer(),
-            );
-          },
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                icon: CircleAvatar(),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              );
+            },
           ),
           title: Text(
             'Reallist',
@@ -49,8 +50,8 @@ class HomePageState extends State<HomePage> {
                 'assets/logo.png',
                 width: 40,
               ),
-              tooltip: 'Close application',
-              onPressed: () => HomePage(),
+
+              onPressed: () => HomePage1(),
               // exit(0),
             ),
           ],
@@ -223,11 +224,17 @@ class HomePageState extends State<HomePage> {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  
                   children: [
-                    Text('Checklist',style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                    Text(
+                      'Checklist',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                     Spacer(),
-                    Icon(Icons.navigate_next, size: 30,),
+                    Icon(
+                      Icons.navigate_next,
+                      size: 30,
+                    ),
                   ],
                 ),
               ),

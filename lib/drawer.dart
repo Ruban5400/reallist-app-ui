@@ -39,6 +39,13 @@ class Nav_Bar extends StatelessWidget {
             title: Text('Logout'),
             onTap: () => exit(0),
           ),
+          
+          ListTile(
+            
+            title: Text('App Veraion 0.0.1',textAlign:  TextAlign.center,),
+            
+          ),
+
         ],
       ),
     );

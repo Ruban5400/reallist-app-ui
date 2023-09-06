@@ -1,16 +1,15 @@
-import 'dart:io';
-
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:reallist/drawer.dart';
+import 'package:reallist/home_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage1 extends StatefulWidget {
   @override
-  HomePageState createState() => HomePageState();
+  HomePage1State createState() => HomePage1State();
 }
 
-class HomePageState extends State<HomePage> {
+class HomePage1State extends State<HomePage1> {
   var currentIndex = 0;
   final controller = PageController(viewportFraction: 0.8, keepPage: true);
 
@@ -20,12 +19,17 @@ class HomePageState extends State<HomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        drawer: Nav_Bar(),
         // AppBar - profile pic, profile name, notifications, app icon- log out
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(191, 58, 74, 1),
-          leading: IconButton(
-            icon: CircleAvatar(backgroundImage: NetworkImage("")),
-            onPressed: () {},
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                icon: CircleAvatar(),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              );
+            },
           ),
           title: Text(
             'Reallist',
@@ -46,7 +50,8 @@ class HomePageState extends State<HomePage> {
                 width: 40,
               ),
               tooltip: 'Close application',
-              onPressed: () => exit(0),
+              onPressed: () => HomePage(),
+              // exit(0),
             ),
           ],
         ),
@@ -125,7 +130,7 @@ class HomePageState extends State<HomePage> {
                                 color: Colors.black,
                                 blurRadius: 1.0,
                                 spreadRadius: 0.0,
-                                offset: Offset(2.0, 0),
+                                offset: Offset(2.0, 2.0),
                               ),
                             ],
                           ),
@@ -189,25 +194,6 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.symmetric(vertical: 30),
-                  height: 150,
-                  width: 150,
-                  child: Image.asset("assets/qr.png")),
-              LinearPercentIndicator(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                lineHeight: 15,
-                percent: 40 / 100,
-                center: Text(
-                  "40%",
-                  style: const TextStyle(fontSize: 11),
-                ),
-                barRadius: const Radius.circular(50),
-                progressColor: Color.fromRGBO(191, 58, 74, 1),
-                // animation: true,
-                // animateFromLastPercent: true,
-                backgroundColor: Colors.white,
-              ),
-              Container(
                 width: double.infinity,
                 margin: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
                 height: 60,
@@ -218,11 +204,17 @@ class HomePageState extends State<HomePage> {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  
                   children: [
-                    Text('Checklist',style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                    Text(
+                      'Checklist',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                     Spacer(),
-                    Icon(Icons.navigate_next, size: 30,),
+                    Icon(
+                      Icons.navigate_next,
+                      size: 30,
+                    ),
                   ],
                 ),
               ),
@@ -230,34 +222,61 @@ class HomePageState extends State<HomePage> {
           ),
         ),
 
+        floatingActionButton: Transform.scale(
+          scale:
+              1.3, // Adjust the scale factor as needed (1.0 is the default size)
+          child: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Color.fromRGBO(191, 58, 74, 1),
+            elevation: 10,
+            child: Icon(
+              Icons.qr_code_scanner,
+              color: Colors.white,
+              size: 30,
+            ),
+            shape: CircleBorder(),
+          ),
+        ),
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.miniCenterDocked,
+
         // Bottom nav bar - Home, Override, History, My Team
         bottomNavigationBar: CurvedNavigationBar(
-            backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
-            onTap: (index) {},
-            height: 55,
-            color: Color.fromRGBO(191, 58, 74, 1),
-            items: [
-              Icon(
-                Icons.home,
-                size: 30,
-                color: Colors.white,
-              ),
-              Icon(
-                Icons.edit,
-                size: 30,
-                color: Colors.white,
-              ),
-              Icon(
-                Icons.history,
-                size: 30,
-                color: Colors.white,
-              ),
-              Icon(
-                Icons.group,
-                size: 30,
-                color: Colors.white,
-              ),
-            ]),
+          backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
+          onTap: (index) {},
+          height: 60,
+          color: Colors.white,
+          items: [
+            CurvedNavigationBarItem(
+                icon: const Icon(
+                  Icons.home,
+                  size: 30,
+                  color: Color.fromRGBO(191, 58, 74, 1),
+                ),
+                label: "Home"),
+            CurvedNavigationBarItem(
+                icon: Icon(
+                  Icons.edit,
+                  size: 30,
+                  color: Color.fromRGBO(191, 58, 74, 1),
+                ),
+                label: "Override"),
+            CurvedNavigationBarItem(
+                icon: Icon(
+                  Icons.history,
+                  size: 30,
+                  color: Color.fromRGBO(191, 58, 74, 1),
+                ),
+                label: "History"),
+            CurvedNavigationBarItem(
+                icon: Icon(
+                  Icons.group,
+                  size: 30,
+                  color: Color.fromRGBO(191, 58, 74, 1),
+                ),
+                label: "My Team"),
+          ],
+        ),
       ),
     );
   }
