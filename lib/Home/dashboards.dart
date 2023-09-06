@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reallist/Home/dashboard_list.dart';
 
-
 class TabBarPage extends StatefulWidget {
   const TabBarPage({Key? key}) : super(key: key);
 
@@ -25,22 +24,13 @@ class _TabBarPageState extends State<TabBarPage>
     super.dispose();
   }
 
-
-
-
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-     
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 15),
           child: Container(
             height: MediaQuery.of(context).size.height,
             child: Column(
@@ -67,11 +57,29 @@ class _TabBarPageState extends State<TabBarPage>
                           ),
                           controller: tabController,
                           tabs: [
-                            Tab(
-                              text: 'Tab 1',
+                            Container(
+                              width: 250,
+                              child: Tab(
+                                child: Text(
+                                  'Dashboard',
+                                  style: TextStyle(
+                                    fontSize:
+                                        18, // Adjust the font size as needed
+                                  ),
+                                ),
+                              ),
                             ),
-                            Tab(
-                              text: 'Tab 1',
+                            Container(
+                              width: 250,
+                              child: Tab(
+                                child: Text(
+                                  'My Dashboard',
+                                  style: TextStyle(
+                                    fontSize:
+                                        18, // Adjust the font size as needed
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -83,8 +91,8 @@ class _TabBarPageState extends State<TabBarPage>
                   child: TabBarView(
                     controller: tabController,
                     children: [
-                     DashboardList(),
-                     DashboardList(),
+                      DashboardList(),
+                      DashboardList(),
                     ],
                   ),
                 )
