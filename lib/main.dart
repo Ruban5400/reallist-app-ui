@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Real_list app',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(191, 58, 74, 1)),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromRGBO(191, 58, 74, 1)),
         useMaterial3: true,
       ),
-      home:  HomePage(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

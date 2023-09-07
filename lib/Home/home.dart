@@ -1,31 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:reallist/Home/dashboards.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageController(viewportFraction: 0.8, keepPage: true);
     return Column(
       children: [
         Container(
           height: 185,
-         
           child: TabBarPage(),
-        ),
-        
-        SmoothPageIndicator(
-          controller: controller,
-          count: 3,
-          effect: const WormEffect(
-            dotHeight: 8,
-            dotWidth: 16,
-            activeDotColor: Color.fromRGBO(191, 58, 74, 1),
-            type: WormType.thinUnderground,
-          ),
         ),
         Container(
             margin: EdgeInsets.symmetric(vertical: 30),

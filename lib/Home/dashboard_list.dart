@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DashboardList extends StatelessWidget {
   @override
@@ -20,7 +19,7 @@ class DashboardList extends StatelessWidget {
         for (int i = 0; i < 6; i++)
           Container(
             width: 174,
-            margin: EdgeInsets.only(left: 15,bottom: 5),
+            margin: EdgeInsets.only(left: 15, bottom: 5),
             padding: new EdgeInsets.all(10.0),
             decoration: BoxDecoration(
               color: Colors.white,

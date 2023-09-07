@@ -23,12 +23,12 @@ class Nav_Bar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person),
             title: Text('Profile'),
-            onTap: (){},
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
-            onTap: (){},
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.toggle_on),
@@ -42,11 +42,11 @@ class Nav_Bar extends StatelessWidget {
           // SizedBox(height: 320),
           Spacer(),
           ListTile(
-            
-            title: Text('App Veraion 0.0.1',textAlign:  TextAlign.center,),
-            
+            title: Text(
+              'App Veraion 0.0.1',
+              textAlign: TextAlign.center,
+            ),
           ),
-
         ],
       ),
     );
