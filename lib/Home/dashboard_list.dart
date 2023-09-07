@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DashboardList extends StatelessWidget {
-  const DashboardList({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    List<String> heads = [
+      'Total',
+      'Completed',
+      'Assigned',
+      'Pending',
+      'Upcomming',
+      'Override'
+    ];
+
+    return ListView(
       scrollDirection: Axis.horizontal,
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      children: [
+        // Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (int i = 0; i < 6; i++)
           Container(
             width: 174,
-            height: 95,
-            margin: EdgeInsets.only(left: 15),
+            margin: EdgeInsets.only(left: 15,bottom: 5),
             padding: new EdgeInsets.all(10.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -22,7 +30,7 @@ class DashboardList extends StatelessWidget {
                   color: Colors.black,
                   blurRadius: 1.0,
                   spreadRadius: 0.0,
-                  offset: Offset(2.0, 0),
+                  offset: Offset(2.0, 2.0),
                 ),
               ],
             ),
@@ -30,7 +38,7 @@ class DashboardList extends StatelessWidget {
               // mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Text(
-                  'Total',
+                  '${heads[i]}',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -71,7 +79,92 @@ class DashboardList extends StatelessWidget {
             ),
           ),
         SizedBox(width: 15),
-      ]),
+        // ]),
+      ],
     );
   }
 }
+
+
+// import 'package:flutter/material.dart';
+
+// class DashboardList extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     List<String> heads = [
+//       'Total',
+//       'Completed',
+//       'Assigned',
+//       'Pending',
+//       'Upcoming',
+//       'Override'
+//     ];
+
+//     return ListView.builder(
+//       scrollDirection: Axis.horizontal,
+//       itemCount: 6,
+//       itemBuilder: (context, i) {
+//         return Container(
+//           width: 174,
+//           height: 50,
+//           margin: EdgeInsets.only(left: 15),
+//           padding: EdgeInsets.all(10.0),
+//           decoration: BoxDecoration(
+//             color: Colors.white,
+//             borderRadius: BorderRadius.circular(15),
+//             boxShadow: [
+//               BoxShadow(
+//                 color: Colors.black,
+//                 blurRadius: 1.0,
+//                 spreadRadius: 0.0,
+//                 offset: Offset(2.0, 2.0),
+//               ),
+//             ],
+//           ),
+//           child: Column(
+//             children: <Widget>[
+//               Text(
+//                 '${heads[i]}',
+//                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+//                 textAlign: TextAlign.center,
+//               ),
+//               Row(
+//                 children: [
+//                   Column(
+//                     children: [
+//                       Text(
+//                         'Checklist',
+//                         style: TextStyle(fontSize: 18),
+//                         textAlign: TextAlign.center,
+//                       ),
+//                       Text(
+//                         '123',
+//                         style: TextStyle(fontSize: 16),
+//                         textAlign: TextAlign.center,
+//                       ),
+//                     ],
+//                   ),
+//                   Spacer(),
+//                   Column(
+//                     children: [
+//                       Text(
+//                         'Spot',
+//                         style: TextStyle(fontSize: 18),
+//                         textAlign: TextAlign.center,
+//                       ),
+//                       Text(
+//                         '12',
+//                         style: TextStyle(fontSize: 16),
+//                         textAlign: TextAlign.center,
+//                       ),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             ],
+//           ),
+//         );
+//       },
+//     );
+//   }
+// }

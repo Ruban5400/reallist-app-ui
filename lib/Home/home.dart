@@ -11,127 +11,12 @@ class Home extends StatelessWidget {
     final controller = PageController(viewportFraction: 0.8, keepPage: true);
     return Column(
       children: [
-        Container(height: 200,child: TabBarPage(),),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-          height: 40,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(
-              15,
-            ),
-          ),
-          child: TabBar(
-            // give the indicator a decoration (color and border radius)
-            labelPadding: EdgeInsets.all(0),
-            indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                15,
-              ),
-              color: Color.fromRGBO(191, 58, 74, 1),
-            ),
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.black,
-            tabs: [
-              // first tab [you can add an icon using the icon property]
-              Container(
-                width: 250,
-                child: Tab(
-                  child: Text(
-                    'Dashboard',
-                    style: TextStyle(
-                      fontSize: 18, // Adjust the font size as needed
-                    ),
-                  ),
-                ),
-              ),
-
-              // second tab [you can add an icon using the icon property]
-              Container(
-                width: 300,
-                child: Tab(
-                  child: Text(
-                    'My Dashboard',
-                    style: TextStyle(
-                      fontSize: 18, // Adjust the font size as needed
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          height: 185,
+         
+          child: TabBarPage(),
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-            for (int i = 0; i < 6; i++)
-              Container(
-                width: 174,
-                height: 95,
-                margin: EdgeInsets.only(left: 15),
-                padding: new EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 1.0,
-                      spreadRadius: 0.0,
-                      offset: Offset(2.0, 0),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  // mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text(
-                      'Total',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              'Checklist',
-                              style: TextStyle(fontSize: 18),
-                              textAlign: TextAlign.center,
-                            ),
-                            Text(
-                              '123',
-                              style: TextStyle(fontSize: 16),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        Column(
-                          children: [
-                            Text(
-                              'Spot',
-                              style: TextStyle(fontSize: 18),
-                              textAlign: TextAlign.center,
-                            ),
-                            Text(
-                              '12',
-                              style: TextStyle(fontSize: 16),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            SizedBox(width: 15),
-          ]),
-        ),
-        SizedBox(height: 15),
+        
         SmoothPageIndicator(
           controller: controller,
           count: 3,
@@ -189,3 +74,127 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+        // Container(
+        //   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+        //   height: 40,
+        //   decoration: BoxDecoration(
+        //     color: Colors.white,
+        //     borderRadius: BorderRadius.circular(
+        //       15,
+        //     ),
+        //   ),
+        //   child: TabBar(
+        //     // give the indicator a decoration (color and border radius)
+        //     labelPadding: EdgeInsets.all(0),
+        //     indicator: BoxDecoration(
+        //       borderRadius: BorderRadius.circular(
+        //         15,
+        //       ),
+        //       color: Color.fromRGBO(191, 58, 74, 1),
+        //     ),
+        //     labelColor: Colors.white,
+        //     unselectedLabelColor: Colors.black,
+        //     tabs: [
+        //       // first tab [you can add an icon using the icon property]
+        //       Container(
+        //         width: 250,
+        //         child: Tab(
+        //           child: Text(
+        //             'Dashboard',
+        //             style: TextStyle(
+        //               fontSize: 18, // Adjust the font size as needed
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+
+        //       // second tab [you can add an icon using the icon property]
+        //       Container(
+        //         width: 300,
+        //         child: Tab(
+        //           child: Text(
+        //             'My Dashboard',
+        //             style: TextStyle(
+        //               fontSize: 18, // Adjust the font size as needed
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        // SingleChildScrollView(
+        //   scrollDirection: Axis.horizontal,
+        //   child:
+        //       Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        //     for (int i = 0; i < 6; i++)
+        //       Container(
+        //         width: 174,
+        //         height: 95,
+        //         margin: EdgeInsets.only(left: 15),
+        //         padding: new EdgeInsets.all(10.0),
+        //         decoration: BoxDecoration(
+        //           color: Colors.white,
+        //           borderRadius: BorderRadius.circular(15),
+        //           boxShadow: [
+        //             BoxShadow(
+        //               color: Colors.black,
+        //               blurRadius: 1.0,
+        //               spreadRadius: 0.0,
+        //               offset: Offset(2.0, 0),
+        //             ),
+        //           ],
+        //         ),
+        //         child: Column(
+        //           // mainAxisSize: MainAxisSize.min,
+        //           children: <Widget>[
+        //             Text(
+        //               'Total',
+        //               style:
+        //                   TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        //               textAlign: TextAlign.center,
+        //             ),
+        //             Row(
+        //               children: [
+        //                 Column(
+        //                   children: [
+        //                     Text(
+        //                       'Checklist',
+        //                       style: TextStyle(fontSize: 18),
+        //                       textAlign: TextAlign.center,
+        //                     ),
+        //                     Text(
+        //                       '123',
+        //                       style: TextStyle(fontSize: 16),
+        //                       textAlign: TextAlign.center,
+        //                     ),
+        //                   ],
+        //                 ),
+        //                 Spacer(),
+        //                 Column(
+        //                   children: [
+        //                     Text(
+        //                       'Spot',
+        //                       style: TextStyle(fontSize: 18),
+        //                       textAlign: TextAlign.center,
+        //                     ),
+        //                     Text(
+        //                       '12',
+        //                       style: TextStyle(fontSize: 16),
+        //                       textAlign: TextAlign.center,
+        //                     ),
+        //                   ],
+        //                 ),
+        //               ],
+        //             ),
+        //           ],
+        //         ),
+        //       ),
+        //     SizedBox(width: 15),
+        //   ]),
+        // ),

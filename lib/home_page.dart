@@ -64,7 +64,7 @@ class HomePageState extends State<HomePage> {
             color: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
             width: double.infinity,
             height: double.infinity,
-            child: Home()),
+            child: const Home()),
 
         // Bottom nav bar - Home, Override, History, My Team
         bottomNavigationBar: CurvedNavigationBar(

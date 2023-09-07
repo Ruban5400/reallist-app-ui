@@ -27,77 +27,69 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.01),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: [
-                SizedBox(height: 50),
-                Container(
-                  // height: 50,
-                  width: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
-                      color: Colors.redAccent,
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(5),
-                        child: TabBar(
-                          unselectedLabelColor: Colors.white,
-                          labelColor: Colors.black,
-                          indicatorColor: Colors.white,
-                          indicatorWeight: 2,
-                          indicator: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          controller: tabController,
-                          tabs: [
-                            Container(
-                              width: 250,
-                              child: Tab(
-                                child: Text(
-                                  'Dashboard',
-                                  style: TextStyle(
-                                    fontSize:
-                                        18, // Adjust the font size as needed
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: 250,
-                              child: Tab(
-                                child: Text(
-                                  'My Dashboard',
-                                  style: TextStyle(
-                                    fontSize:
-                                        18, // Adjust the font size as needed
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+        child: Container(
+          // height: MediaQuery.of(context).size.height,
+          height: 170,
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(
+                    25,
                   ),
                 ),
-                Expanded(
-                  child: TabBarView(
-                    controller: tabController,
-                    children: [
-                      DashboardList(),
-                      DashboardList(),
-                    ],
+                child: TabBar(
+                  labelPadding: EdgeInsets.all(0),
+                  indicator: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      25,
+                    ),
+                    color: Color.fromRGBO(191, 58, 74, 1),
                   ),
-                )
-              ],
-            ),
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  controller: tabController,
+                  tabs: [
+                    Container(
+                      width: 250,
+                      child: Tab(
+                        child: Text(
+                          'Dashboard',
+                          style: TextStyle(
+                            fontSize: 18, // Adjust the font size as needed
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 250,
+                      child: Tab(
+                        child: Text(
+                          'My Dashboard',
+                          style: TextStyle(
+                            fontSize: 18, // Adjust the font size as needed
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: TabBarView(
+                  controller: tabController,
+                  children: [
+                    DashboardList(),
+                    DashboardList(),
+                  ],
+                ),
+              )
+            ],
           ),
         ),
       ),
