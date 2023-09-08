@@ -63,6 +63,17 @@ class CheckList extends StatelessWidget {
                                 );
                               },
                             ),
+                            Spacer(),
+                            IconButton(
+                              icon: Icon(
+                                Icons.search,
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                showSearch(
+                                    context: context, delegate: CustomSearch());
+                              },
+                            ),
                           ],
                         ),
                       ],
@@ -75,5 +86,68 @@ class CheckList extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CustomSearch extends SearchDelegate {
+  // Add details here
+  List checkListData = [];
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        onPressed: () {
+          query = '';
+        },
+        icon: Icon(Icons.clear),
+      )
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        close(context, null);
+      },
+      icon: Icon(Icons.arrow_back),
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    List matchQuery = [];
+    for (var item in checkListData) {
+      if (item.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(item);
+      }
+    }
+    return ListView.builder(
+        itemCount: matchQuery.length,
+        itemBuilder: (context, index) {
+          var result = matchQuery[index];
+          return ListTile(
+            title: Text(result),
+          );
+        });
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List matchQuery = [];
+    for (var item in checkListData) {
+      if (item.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(item);
+      }
+    }
+    return ListView.builder(
+        itemCount: matchQuery.length,
+        itemBuilder: (context, index) {
+          var result = matchQuery[index];
+          return ListTile(
+            title: Text(result),
+          );
+        });
   }
 }
