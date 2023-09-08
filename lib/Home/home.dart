@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:reallist/Home/checklist.dart';
 import 'package:reallist/Home/dashboards.dart';
+import 'package:reallist/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -29,7 +30,7 @@ class Home extends StatelessWidget {
             style: const TextStyle(fontSize: 11),
           ),
           barRadius: const Radius.circular(50),
-          progressColor: Color.fromRGBO(191, 58, 74, 1),
+          progressColor: Crimson.primaryColor,
           // animation: true,
           // animateFromLastPercent: true,
           backgroundColor: Colors.white,

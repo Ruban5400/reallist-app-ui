@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reallist/Home/dashboard_list.dart';
+import 'package:reallist/colors.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.01),
+      backgroundColor: Crimson.backgroundColor,
       body: SingleChildScrollView(
         child: Container(
           // height: MediaQuery.of(context).size.height,
@@ -49,7 +50,7 @@ class _TabBarPageState extends State<TabBarPage>
                     borderRadius: BorderRadius.circular(
                       25,
                     ),
-                    color: Color.fromRGBO(191, 58, 74, 1),
+                    color: Crimson.primaryColor,
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,

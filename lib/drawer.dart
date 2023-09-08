@@ -11,6 +11,7 @@ class Nav_Bar extends StatefulWidget {
 
 class _Nav_BarState extends State<Nav_Bar> {
   bool switchValue = true;
+  String theme = '';
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -26,7 +27,7 @@ class _Nav_BarState extends State<Nav_Bar> {
               ),
             ),
           ),
-          
+
           ListTile(
             leading: Icon(Icons.person),
             title: Text('Profile'),
@@ -72,18 +73,23 @@ class _Nav_BarState extends State<Nav_Bar> {
                         // Switch is turned on
                         // Add your custom logic here
                         print('Switch is ON');
+                        theme = 'Crimson';
                       } else {
                         // Switch is turned off
                         // Add your custom logic here
                         print('Switch is OFF');
+                        theme = 'Teal';
                       }
                     });
                   })),
 
-          Spacer(),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.28,
+            child: Spacer(),
+          ),
           ListTile(
             title: Text(
-              'App Veraion 0.0.1',
+              'App Version 0.0.1',
               textAlign: TextAlign.center,
             ),
           ),

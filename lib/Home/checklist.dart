@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reallist/colors.dart';
 import 'package:reallist/home_page.dart';
 
 class CheckList extends StatelessWidget {
@@ -35,7 +36,7 @@ class CheckList extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 builder: (context) => Container(
                   height: MediaQuery.of(context).size.height * 0.75,
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(10),
                   decoration: new BoxDecoration(
                     color: Colors.white,
                     borderRadius: new BorderRadius.only(
@@ -47,11 +48,12 @@ class CheckList extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             IconButton(
                               icon: Icon(
                                 Icons.arrow_back_ios,
-                                size: 20,
+                                size: 22,
                                 // color: Colors.white,
                               ),
                               onPressed: () {
@@ -63,18 +65,58 @@ class CheckList extends StatelessWidget {
                                 );
                               },
                             ),
-                            Spacer(),
+                            Text(
+                              'CHECKLIST',
+                              style: TextStyle(
+                                  color: Crimson.primaryColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                             IconButton(
                               icon: Icon(
-                                Icons.search,
-                                size: 20,
+                                Icons.refresh,
+                                size: 24,
+                                // color: Colors.white,
                               ),
-                              onPressed: () {
-                                showSearch(
-                                    context: context, delegate: CustomSearch());
-                              },
+                              onPressed: () {},
                             ),
                           ],
+                        ),
+                        Divider(
+                          height: 2,
+                        ),
+                        SizedBox(height: 10),
+                        TextField(
+                          decoration: InputDecoration(
+                            isDense: true,
+                            contentPadding: EdgeInsets.all(8),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(
+                                width: 1,
+                              ),
+                            ),
+                            prefixIcon: IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.close,
+                                  size: 25,
+                                )),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                Icons.search,
+                                size: 25,
+                              ),
+                              onPressed: () {},
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0)),
+                              borderSide: BorderSide(color: Colors.black),
+                            ),
+                          ),
+                          keyboardType: TextInputType.text,
+                          textInputAction: TextInputAction.done,
                         ),
                       ],
                     ),
@@ -86,68 +128,5 @@ class CheckList extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class CustomSearch extends SearchDelegate {
-  // Add details here
-  List checkListData = [];
-
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return [
-      IconButton(
-        onPressed: () {
-          query = '';
-        },
-        icon: Icon(Icons.clear),
-      )
-    ];
-  }
-
-  @override
-  Widget buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        close(context, null);
-      },
-      icon: Icon(Icons.arrow_back),
-    );
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    List matchQuery = [];
-    for (var item in checkListData) {
-      if (item.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(item);
-      }
-    }
-    return ListView.builder(
-        itemCount: matchQuery.length,
-        itemBuilder: (context, index) {
-          var result = matchQuery[index];
-          return ListTile(
-            title: Text(result),
-          );
-        });
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    List matchQuery = [];
-    for (var item in checkListData) {
-      if (item.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(item);
-      }
-    }
-    return ListView.builder(
-        itemCount: matchQuery.length,
-        itemBuilder: (context, index) {
-          var result = matchQuery[index];
-          return ListTile(
-            title: Text(result),
-          );
-        });
   }
 }

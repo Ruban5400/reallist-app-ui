@@ -9,6 +9,7 @@ import 'package:reallist/Home/home.dart';
 
 import 'package:reallist/My%20Team/myteam.dart';
 import 'package:reallist/Override/override.dart';
+import 'package:reallist/colors.dart';
 import 'package:reallist/drawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,7 +33,7 @@ class HomePageState extends State<HomePage> {
       drawer: Nav_Bar(),
       // AppBar - profile pic, profile name, notifications, app icon- log out
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(191, 58, 74, 1),
+        backgroundColor: Crimson.primaryColor,
         leading: Builder(
           builder: (context) {
             return IconButton(
@@ -75,7 +76,7 @@ class HomePageState extends State<HomePage> {
       // Bottom nav bar - Home, Override, History, My Team
       bottomNavigationBar: CurvedNavigationBar(
           index: selectedPage,
-          backgroundColor: Color(0xFFF8E7ED),
+          backgroundColor: Crimson.backgroundColor,
 
           //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
           onTap: (index) {
@@ -84,7 +85,7 @@ class HomePageState extends State<HomePage> {
             });
           },
           height: 65,
-          color: Color(0xFFBF3A4A),
+          color: Crimson.primaryColor,
           // color: Color.fromRGBO(191, 58, 74, 1),
           items: [
             CurvedNavigationBarItem(
@@ -122,7 +123,7 @@ class HomePageState extends State<HomePage> {
           ]),
 
       body: Container(
-          color: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
+          color: Crimson.backgroundColor,
           width: double.infinity,
           height: double.infinity,
           child: Screens[selectedPage]),

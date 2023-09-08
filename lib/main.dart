@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reallist/colors.dart';
 import 'package:reallist/home_page.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       // themeMode: ThemeMode.light,
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromRGBO(191, 58, 74, 1)),
+            ColorScheme.fromSeed(seedColor:Crimson.primaryColor),
         useMaterial3: true,
       ),
       home: HomePage(),
