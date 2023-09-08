@@ -1,4 +1,8 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+// import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
+
 import 'package:flutter/material.dart';
 import 'package:reallist/History/history.dart';
 import 'package:reallist/Home/home.dart';
@@ -71,37 +75,50 @@ class HomePageState extends State<HomePage> {
       // Bottom nav bar - Home, Override, History, My Team
       bottomNavigationBar: CurvedNavigationBar(
           index: selectedPage,
-          backgroundColor: Color(0xFFF8E7ED), 
+          backgroundColor: Color(0xFFF8E7ED),
+
           //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
           onTap: (index) {
             setState(() {
               selectedPage = index;
             });
           },
-          height: 55,
+          height: 65,
           color: Color(0xFFBF3A4A),
           // color: Color.fromRGBO(191, 58, 74, 1),
           items: [
-            Icon(
-              Icons.home,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.edit,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.history,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.group,
-              size: 30,
-              color: Colors.white,
-            ),
+            CurvedNavigationBarItem(
+                child: Icon(
+                  Icons.home_outlined,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                label: 'Home',
+                labelStyle: TextStyle(color: Colors.white)),
+            CurvedNavigationBarItem(
+                child: Icon(
+                  Icons.edit,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                label: 'Override',
+                labelStyle: TextStyle(color: Colors.white)),
+            CurvedNavigationBarItem(
+                child: Icon(
+                  Icons.history,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                label: 'History',
+                labelStyle: TextStyle(color: Colors.white)),
+            CurvedNavigationBarItem(
+                child: Icon(
+                  Icons.group,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                label: 'My Team',
+                labelStyle: TextStyle(color: Colors.white)),
           ]),
 
       body: Container(
@@ -112,3 +129,25 @@ class HomePageState extends State<HomePage> {
     );
   }
 }
+
+//   Cureved icons without label
+            // Icon(
+            //   Icons.home,
+            //   size: 30,
+            //   color: Colors.white,
+            // ),
+            // Icon(
+            //   Icons.edit,
+            //   size: 30,
+            //   color: Colors.white,
+            // ),
+            // Icon(
+            //   Icons.history,
+            //   size: 30,
+            //   color: Colors.white,
+            // ),
+            // Icon(
+            //   Icons.group,
+            //   size: 30,
+            //   color: Colors.white,
+            // ),
