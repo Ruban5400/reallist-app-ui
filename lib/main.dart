@@ -12,6 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Real_list app',
+      // Light and Dark theme
+      // theme: ThemeData(brightness: Brightness.light),
+      // darkTheme: ThemeData(brightness: Brightness.dark),
+      // themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.light,
       theme: ThemeData(
         colorScheme:
             ColorScheme.fromSeed(seedColor: Color.fromRGBO(191, 58, 74, 1)),

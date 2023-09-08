@@ -71,14 +71,16 @@ class HomePageState extends State<HomePage> {
       // Bottom nav bar - Home, Override, History, My Team
       bottomNavigationBar: CurvedNavigationBar(
           index: selectedPage,
-          backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
+          backgroundColor: Color(0xFFF8E7ED), 
+          //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
           onTap: (index) {
             setState(() {
               selectedPage = index;
             });
           },
           height: 55,
-          color: Color.fromRGBO(191, 58, 74, 1),
+          color: Color(0xFFBF3A4A),
+          // color: Color.fromRGBO(191, 58, 74, 1),
           items: [
             Icon(
               Icons.home,

@@ -1,5 +1,14 @@
 import 'dart:ui';
 
-const Color primaryColor = Color.fromRGBO(191, 58, 74, 1);
-const Color secondaryColor = Color(0xFFFFA200);
-const Color backgroundColor = Color(0xFFF0F0F0);
+void Crimson() {
+  const Color primaryColor = Color(0xFFBF3A4A);
+  const Color backgroundColor = Color(0xFFF8E7ED);
+// const Color secondaryColor;
+}
+
+void  Teal() {
+  const Color primaryColor = Color(0xFF00A99D);
+  const Color backgroundColor = Color(0xFFC8ECE8);
+// const Color secondaryColor;
+}
+
