@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reallist/Home/dashboard_list.dart';
-import 'package:reallist/colors.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({Key? key}) : super(key: key);
