@@ -34,7 +34,9 @@ class HomePageState extends State<HomePage> {
         leading: Builder(
           builder: (context) {
             return IconButton(
-              icon: CircleAvatar(),
+              icon: CircleAvatar(
+                backgroundColor: Colors.white,
+              ),
               onPressed: () => Scaffold.of(context).openDrawer(),
             );
           },

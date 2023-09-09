@@ -19,9 +19,7 @@ class _Nav_BarState extends State<Nav_Bar> {
             accountName: Text('Reallist'),
             accountEmail: Text('reallist@gmail.com'),
             currentAccountPicture: CircleAvatar(
-              child: ClipOval(
-                child: Image.asset(''),
-              ),
+              backgroundColor: Colors.white,
             ),
           ),
 

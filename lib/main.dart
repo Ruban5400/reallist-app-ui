@@ -8,7 +8,7 @@ void main() {
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  bool appColor = true;
+  // bool appColor = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
 
       // ignore: dead_code
-      theme: appColor ? ThemeClass.crimsonTheme : ThemeClass.tealTheme,
+      theme: false ? ThemeClass.crimsonTheme : ThemeClass.tealTheme,
 
       home: HomePage(),
       debugShowCheckedModeBanner: false,
