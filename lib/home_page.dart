@@ -22,6 +22,7 @@ class HomePageState extends State<HomePage> {
     MyTeam(),
   ];
   int selectedPage = 0;
+  bool click = true;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +53,22 @@ class HomePageState extends State<HomePage> {
               Icons.notifications_none_outlined,
               size: 30,
               color: Colors.white,
+            ),
+          ),
+          TextButton(
+            style: ElevatedButton.styleFrom(
+              shape: CircleBorder(),
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {
+              setState(() {
+                click = !click;
+              });
+            },
+            child: Icon(
+              (click == false) ? Icons.light_mode : Icons.dark_mode,
+              size: 30, 
             ),
           ),
           IconButton(

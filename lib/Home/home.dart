@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:reallist/Home/checklist.dart';
 import 'package:reallist/Home/dashboards.dart';
-import 'package:reallist/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

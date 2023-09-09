@@ -10,7 +10,6 @@ class Nav_Bar extends StatefulWidget {
 class _Nav_BarState extends State<Nav_Bar> {
   @override
   Widget build(BuildContext context) {
-    bool switchValue = true;
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -22,7 +21,6 @@ class _Nav_BarState extends State<Nav_Bar> {
               backgroundColor: Colors.white,
             ),
           ),
-
           ListTile(
             leading: Icon(Icons.person),
             title: Text('Profile'),
@@ -42,25 +40,6 @@ class _Nav_BarState extends State<Nav_Bar> {
             title: Text('Logout'),
             onTap: () => exit(0),
           ),
-          // SizedBox(height: 320),
-          Container(
-            height: 50,
-            child: Switch(
-                inactiveThumbColor: Color(0xFF00A99D),
-                activeColor: Color(0xFFBF3A4A),
-                activeThumbImage: AssetImage('assets/logo.png'),
-                activeTrackColor: Colors.transparent,
-                inactiveTrackColor: Colors.transparent,
-                inactiveThumbImage: AssetImage('assets/logo.png'),
-                value: switchValue,
-                onChanged: (newValue) {
-                  setState(() {
-                    switchValue = newValue;
-                    // passingValue(switchValue);
-                  });
-                }),
-          ),
-
           Container(
             height: MediaQuery.of(context).size.height * 0.28,
             child: Spacer(),
