@@ -3,11 +3,12 @@ import 'package:reallist/colors.dart';
 import 'package:reallist/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  bool appColor = true;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +18,11 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(brightness: Brightness.light),
       // darkTheme: ThemeData(brightness: Brightness.dark),
       // themeMode: ThemeMode.system,
-      // themeMode: ThemeMode.light,
-      theme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor:Crimson.primaryColor),
-        useMaterial3: true,
-      ),
+      themeMode: ThemeMode.light,
+
+      // ignore: dead_code
+      theme: appColor ? ThemeClass.crimsonTheme : ThemeClass.tealTheme,
+
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );

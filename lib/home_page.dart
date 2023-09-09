@@ -1,5 +1,3 @@
-// import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 
@@ -9,7 +7,6 @@ import 'package:reallist/Home/home.dart';
 
 import 'package:reallist/My%20Team/myteam.dart';
 import 'package:reallist/Override/override.dart';
-import 'package:reallist/colors.dart';
 import 'package:reallist/drawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,7 +30,7 @@ class HomePageState extends State<HomePage> {
       drawer: Nav_Bar(),
       // AppBar - profile pic, profile name, notifications, app icon- log out
       appBar: AppBar(
-        backgroundColor: Crimson.primaryColor,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         leading: Builder(
           builder: (context) {
             return IconButton(
@@ -76,7 +73,8 @@ class HomePageState extends State<HomePage> {
       // Bottom nav bar - Home, Override, History, My Team
       bottomNavigationBar: CurvedNavigationBar(
           index: selectedPage,
-          backgroundColor: Crimson.backgroundColor,
+          backgroundColor:
+              Theme.of(context).colorScheme.primary.withOpacity(0.1),
 
           //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
           onTap: (index) {
@@ -85,7 +83,7 @@ class HomePageState extends State<HomePage> {
             });
           },
           height: 65,
-          color: Crimson.primaryColor,
+          color: Theme.of(context).colorScheme.primary,
           // color: Color.fromRGBO(191, 58, 74, 1),
           items: [
             CurvedNavigationBarItem(
@@ -123,32 +121,10 @@ class HomePageState extends State<HomePage> {
           ]),
 
       body: Container(
-          color: Crimson.backgroundColor,
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
           width: double.infinity,
           height: double.infinity,
           child: Screens[selectedPage]),
     );
   }
 }
-
-//   Cureved icons without label
-            // Icon(
-            //   Icons.home,
-            //   size: 30,
-            //   color: Colors.white,
-            // ),
-            // Icon(
-            //   Icons.edit,
-            //   size: 30,
-            //   color: Colors.white,
-            // ),
-            // Icon(
-            //   Icons.history,
-            //   size: 30,
-            //   color: Colors.white,
-            // ),
-            // Icon(
-            //   Icons.group,
-            //   size: 30,
-            //   color: Colors.white,
-            // ),

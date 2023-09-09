@@ -18,9 +18,9 @@ class DashboardList extends StatelessWidget {
         // Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (int i = 0; i < 6; i++)
           Container(
-            width: 174,
+            width: 200,
             margin: EdgeInsets.only(left: 15, bottom: 5),
-            padding: new EdgeInsets.all(10.0),
+            padding: new EdgeInsets.all(12.0),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(15),
@@ -41,14 +41,25 @@ class DashboardList extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
+                Spacer(),
+                Divider(height: 2),
+                Spacer(),
                 Row(
                   children: [
                     Column(
                       children: [
-                        Text(
-                          'Checklist',
-                          style: TextStyle(fontSize: 18),
-                          textAlign: TextAlign.center,
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.checklist,
+                              size: 20,
+                            ),
+                            Text(
+                              'Checklist',
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
                         ),
                         Text(
                           '123',
@@ -60,10 +71,18 @@ class DashboardList extends StatelessWidget {
                     Spacer(),
                     Column(
                       children: [
-                        Text(
-                          'Spot',
-                          style: TextStyle(fontSize: 18),
-                          textAlign: TextAlign.center,
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.my_location,
+                              size: 20,
+                            ),
+                            Text(
+                              'Spot',
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
                         ),
                         Text(
                           '12',

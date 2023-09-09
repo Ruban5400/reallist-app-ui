@@ -28,11 +28,11 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Crimson.backgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.01),
       body: SingleChildScrollView(
         child: Container(
           // height: MediaQuery.of(context).size.height,
-          height: 170,
+          height: 180,
           child: Column(
             children: [
               Container(
@@ -50,7 +50,7 @@ class _TabBarPageState extends State<TabBarPage>
                     borderRadius: BorderRadius.circular(
                       25,
                     ),
-                    color: Crimson.primaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,

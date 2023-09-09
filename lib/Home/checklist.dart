@@ -68,7 +68,7 @@ class CheckList extends StatelessWidget {
                             Text(
                               'CHECKLIST',
                               style: TextStyle(
-                                  color: Crimson.primaryColor,
+                                  color: Theme.of(context).colorScheme.primary,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),

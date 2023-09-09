@@ -13,3 +13,25 @@ class Teal {
 // const Color secondaryColor;
 }
 
+class ThemeClass {
+  Color lightPrimaryColor = Color(0xFFBF3A4A);
+  Color darkPrimaryColor = Color(0xFF00A99D);
+
+  static ThemeData crimsonTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: const ColorScheme.light()
+        .copyWith(primary: _themeClass.lightPrimaryColor),
+   
+  );
+
+  static ThemeData tealTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: const ColorScheme.light()
+        .copyWith(primary: _themeClass.darkPrimaryColor),
+
+    
+  );
+}
+
+ThemeClass _themeClass = ThemeClass();
+

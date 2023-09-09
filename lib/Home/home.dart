@@ -12,15 +12,18 @@ class Home extends StatelessWidget {
     return Column(
       children: [
         Container(
-          // height: 185,
-          height: MediaQuery.of(context).size.height * 0.22,
+          height: MediaQuery.of(context).size.height * 0.25,
           child: TabBarPage(),
         ),
         Container(
             margin: EdgeInsets.symmetric(vertical: 30),
             height: 150,
             width: 150,
-            child: Image.asset("assets/qr.png")),
+            child: Icon(
+              Icons.qr_code_scanner,
+              size: 150,
+              color: Theme.of(context).colorScheme.primary,
+            )),
         LinearPercentIndicator(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           lineHeight: 15,
@@ -30,7 +33,7 @@ class Home extends StatelessWidget {
             style: const TextStyle(fontSize: 11),
           ),
           barRadius: const Radius.circular(50),
-          progressColor: Crimson.primaryColor,
+          progressColor: Theme.of(context).colorScheme.primary,
           // animation: true,
           // animateFromLastPercent: true,
           backgroundColor: Colors.white,
