@@ -72,13 +72,13 @@ class HomePageState extends State<HomePage> {
                   'assets/logo.png',
                   width: 40,
                 ),
-                onPressed: () {
-                  Navigator.push(
+                onPressed: () { selectedPage!=0 ?
+                  (Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => HomePage(),
                     ),
-                  );
+                  )): null;
                 }
                 // exit(0),
                 ),

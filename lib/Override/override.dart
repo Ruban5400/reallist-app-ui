@@ -95,7 +95,7 @@ class Override extends StatelessWidget {
                   child: Text(
                     'Override details',
                     style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                        // color: Theme.of(context).colorScheme.primary,
                         fontSize: 20),
                   ),
                 ),
