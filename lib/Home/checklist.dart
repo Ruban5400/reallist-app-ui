@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reallist/Home/checklist_details.dart';
 import 'package:reallist/home_page.dart';
 
 class CheckList extends StatelessWidget {
@@ -34,7 +35,7 @@ class CheckList extends StatelessWidget {
                 isScrollControlled: true,
                 backgroundColor: Colors.transparent,
                 builder: (context) => Container(
-                  height: MediaQuery.of(context).size.height * 0.75,
+                  height: MediaQuery.of(context).size.height * 0.80,
                   padding: EdgeInsets.all(10),
                   decoration: new BoxDecoration(
                     color: Colors.white,
@@ -116,6 +117,26 @@ class CheckList extends StatelessWidget {
                           ),
                           keyboardType: TextInputType.text,
                           textInputAction: TextInputAction.done,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 50,
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          // padding: new EdgeInsets.all(12.0),
+                          alignment: Alignment.centerLeft,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.primary,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                // color: Colors.black,
+                                blurRadius: 1.0,
+                                spreadRadius: 0.0,
+                                offset: Offset(2.0, 2.0),
+                              ),
+                            ],
+                          ),
+                          child: CheckListDetails(),
                         ),
                       ],
                     ),
