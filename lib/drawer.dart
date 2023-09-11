@@ -37,14 +37,18 @@ class _Nav_BarState extends State<Nav_Bar> {
             title: Text('Logout'),
             onTap: () => exit(0),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.45,
-            child: Spacer(),
-          ),
-          ListTile(
-            title: Text(
-              'App Version 0.0.1',
-              textAlign: TextAlign.center,
+          // Container(
+          //   height: MediaQuery.of(context).size.height * 0.45,
+          //   child: Spacer(),
+          // ),
+          Container(alignment: Alignment.bottomCenter,
+            height: MediaQuery.of(context).size.height * 0.55,
+            child: ListTile(
+              title:  Text(
+                  'App Version 0.0.1',
+                  textAlign: TextAlign.center,
+                ),
+              
             ),
           ),
         ],
