@@ -36,9 +36,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # Dependencies for - cureved nav bar , percentage
-  # curved_navigation_bar: ^1.0.3
   curved_labeled_navigation_bar: ^2.0.2
   percent_indicator: ^4.2.3
+  provider:
+  shared_preferences:
   
 
 dev_dependencies:

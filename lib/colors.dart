@@ -1,17 +1,5 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-
- class Crimson {
-  static const Color primaryColor = Color(0xFFBF3A4A);
-  static const Color backgroundColor = Color(0xFFF8E7ED);
-// const Color secondaryColor;
-}
-
-class Teal {
-  static const Color primaryColor = Color(0xFF00A99D);
-  static const Color backgroundColor = Color(0xFFC8ECE8);
-// const Color secondaryColor;
-}
+import 'package:reallist/theme_preference.dart';
 
 class ThemeClass {
   Color lightPrimaryColor = Color(0xFFBF3A4A);
@@ -21,17 +9,36 @@ class ThemeClass {
     useMaterial3: true,
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.lightPrimaryColor),
-   
   );
 
   static ThemeData tealTheme = ThemeData(
     useMaterial3: true,
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.darkPrimaryColor),
-
-    
   );
 }
 
 ThemeClass _themeClass = ThemeClass();
 
+class ThemeModel extends ChangeNotifier{
+  bool _isDark = false;
+  ThemePreferences _preferences = ThemePreferences();
+  bool get isDark => _isDark;
+
+  ThemeModel() {
+    _isDark = false;
+    _preferences = ThemePreferences();
+    getPreferences();
+  }
+
+  getPreferences() async{
+    _isDark = await _preferences.getTheme();
+    notifyListeners();
+  }
+
+  set isDark(bool value){
+    _isDark = value;
+    _preferences.setTheme(value);
+    notifyListeners();
+  }
+}
