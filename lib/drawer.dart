@@ -15,8 +15,8 @@ class _Nav_BarState extends State<Nav_Bar> {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text('Reallist'),
-            accountEmail: Text('reallist@gmail.com'),
+            accountName: Text('Emp_Name'),
+            accountEmail: Text('empname@gmail.com'),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.white,
             ),
@@ -31,17 +31,14 @@ class _Nav_BarState extends State<Nav_Bar> {
             title: Text('Settings'),
             onTap: () {},
           ),
-          ListTile(
-            leading: Icon(Icons.toggle_on),
-            title: Text('Change Theme'),
-          ),
+          
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             onTap: () => exit(0),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.28,
+            height: MediaQuery.of(context).size.height * 0.45,
             child: Spacer(),
           ),
           ListTile(
