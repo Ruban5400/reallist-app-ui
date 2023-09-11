@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reallist/Home/spot_details.dart';
-import 'package:reallist/home_page.dart';
 
 class SpotList extends StatelessWidget {
   const SpotList({super.key});
@@ -47,7 +46,7 @@ class SpotList extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
                   blurRadius: 3.0,
                   spreadRadius: 1.0,
-                  offset: Offset(2.0, 2.0),
+                  offset: Offset(-2.0, -2.0),
                 ),
               ],
             ),
