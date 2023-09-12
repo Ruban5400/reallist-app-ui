@@ -44,7 +44,7 @@ class MyTeam extends StatelessWidget {
                           // color: Colors.black,
                           blurRadius: 1.0,
                           spreadRadius: 0.0,
-                          offset: Offset(-2.0, -2.0),
+                          offset: Offset(2.0, 2.0),
                         ),
                       ],
                     ),

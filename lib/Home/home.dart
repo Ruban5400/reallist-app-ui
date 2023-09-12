@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
               color: Theme.of(context).colorScheme.primary,
             )),
         LinearPercentIndicator(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           lineHeight: 15,
           percent: 40 / 100,
           center: Text(
@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
         ),
         Container(
           // height: 185,
-          height: MediaQuery.of(context).size.height * 0.15,
+          height: MediaQuery.of(context).size.height * 0.1,
           child: CheckList(),
         ),
       ],
