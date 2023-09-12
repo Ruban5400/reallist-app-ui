@@ -69,7 +69,7 @@ class HomePageState extends State<HomePage> {
                 )),
             IconButton(
                 icon: new Image.asset(
-                  'assets/logo.png',
+                  'assets/images/logo.png',
                   width: 35,
                 ),
                 onPressed: () { selectedPage!=0 ?

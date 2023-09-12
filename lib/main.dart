@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
 
               // ignore: dead_code
               theme: themeNotifier.isDark ? ThemeClass.crimsonTheme : ThemeClass.tealTheme,
+             
 
               home: HomePage(),
               debugShowCheckedModeBanner: false,
