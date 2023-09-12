@@ -83,17 +83,23 @@ flutter:
   fonts:
     - family: Montserrat
       fonts:
-        - asset: fonts/Montserrat-Bold.ttf
-        - asset: fonts/Montserrat-Light.ttf
-        - asset: fonts/Montserrat-Medium.ttf
-        - asset: fonts/Montserrat-Regular.ttf
-        - asset: fonts/Montserrat-SemiBold.ttf
-          # style: italic
-    - family: Trajan Pro
+        - asset: assets/fonts/Montserrat-Light.ttf
+          # weight: 700
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 900
+    - family: Ubuntu
       fonts:
-        - asset: fonts/TrajanPro.ttf
-        - asset: fonts/TrajanPro_Bold.ttf
-          weight: 700
+        - asset: assets/fonts/Ubuntu-Medium.ttf
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+          style: italic
+        - asset: assets/fonts/Ubuntu-Bold.ttf
+          weight: 600
+    # - family: RobotoMono
+    #   fonts:
+    #     - asset: fonts/RobotoMono-Regular.ttf
+    #     - asset: fonts/RobotoMono-Bold.ttf
+    #       weight: 700    
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

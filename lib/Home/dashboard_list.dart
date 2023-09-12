@@ -18,7 +18,7 @@ class DashboardList extends StatelessWidget {
         // Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (int i = 0; i < 6; i++)
           Container(
-            width: 200,
+            width: 174,
             margin: EdgeInsets.only(left: 15, bottom: 5),
             padding: new EdgeInsets.all(12.0),
             decoration: BoxDecoration(
@@ -38,7 +38,7 @@ class DashboardList extends StatelessWidget {
               children: <Widget>[
                 Text(
                   '${heads[i]}',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
                 Spacer(),
@@ -52,11 +52,11 @@ class DashboardList extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.checklist,
-                              size: 20,
+                              size: 20,color: Colors.grey
                             ),
                             Text(
                               'Checklist',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 14,color: Colors.grey),
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -75,11 +75,11 @@ class DashboardList extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.my_location,
-                              size: 20,
+                              size: 20,color: Colors.grey
                             ),
                             Text(
                               'Spot',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 14,color: Colors.grey),
                               textAlign: TextAlign.center,
                             ),
                           ],

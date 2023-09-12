@@ -45,7 +45,7 @@ class HomePageState extends State<HomePage> {
           ),
           title: Text(
             'Emp_Name',
-            // style: TextStyle(color: Colors.white),
+            style: TextStyle(fontWeight: FontWeight.w100,fontSize: 19),
           ),
           actions: [
             IconButton(

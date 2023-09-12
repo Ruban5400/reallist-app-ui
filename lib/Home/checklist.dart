@@ -20,7 +20,9 @@ class CheckList extends StatelessWidget {
         children: [
           Text(
             'Checklist',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
           Spacer(),
           IconButton(

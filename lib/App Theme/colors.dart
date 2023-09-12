@@ -8,12 +8,14 @@ class ThemeClass {
 
   static ThemeData crimsonTheme = ThemeData(
     useMaterial3: true,
+    fontFamily: 'Ubuntu',
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.lightPrimaryColor),
   );
 
   static ThemeData tealTheme = ThemeData(
     useMaterial3: true,
+    fontFamily: 'Ubuntu',
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.darkPrimaryColor),
   );
@@ -21,7 +23,7 @@ class ThemeClass {
 
 ThemeClass _themeClass = ThemeClass();
 
-class ThemeModel extends ChangeNotifier{
+class ThemeModel extends ChangeNotifier {
   bool _isDark = false;
   ThemePreferences _preferences = ThemePreferences();
   bool get isDark => _isDark;
@@ -32,12 +34,12 @@ class ThemeModel extends ChangeNotifier{
     getPreferences();
   }
 
-  getPreferences() async{
+  getPreferences() async {
     _isDark = await _preferences.getTheme();
     notifyListeners();
   }
 
-  set isDark(bool value){
+  set isDark(bool value) {
     _isDark = value;
     _preferences.setTheme(value);
     notifyListeners();
