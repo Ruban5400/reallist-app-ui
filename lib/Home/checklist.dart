@@ -9,7 +9,7 @@ class CheckList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+      margin: EdgeInsets.symmetric(vertical: 35, horizontal: 15),
       padding: EdgeInsets.only(left: 15),
       decoration: BoxDecoration(
         color: Colors.white,

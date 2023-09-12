@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
         ),
         Container(
           // height: 185,
-          height: MediaQuery.of(context).size.height * 0.1,
+          height: MediaQuery.of(context).size.height * 0.15,
           child: CheckList(),
         ),
       ],

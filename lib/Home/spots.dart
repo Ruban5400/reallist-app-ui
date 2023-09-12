@@ -46,7 +46,7 @@ class SpotList extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
                   blurRadius: 3.0,
                   spreadRadius: 1.0,
-                  offset: Offset(-2.0, -2.0),
+                  offset: Offset(2.0, 2.0),
                 ),
               ],
             ),
