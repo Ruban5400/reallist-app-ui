@@ -42,7 +42,7 @@ class _Nav_BarState extends State<Nav_Bar> {
           //   child: Spacer(),
           // ),
           Container(alignment: Alignment.bottomCenter,
-            height: MediaQuery.of(context).size.height * 0.55,
+            height: MediaQuery.of(context).size.height * 0.56,
             child: ListTile(
               title:  Text(
                   'App Version 0.0.1',

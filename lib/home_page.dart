@@ -31,11 +31,11 @@ class HomePageState extends State<HomePage> {
       return Scaffold(
         drawer: Nav_Bar(),
         // AppBar - profile pic, profile name, notifications, app icon- log out
-        appBar: AppBar(
+        appBar: AppBar(foregroundColor: Colors.white,
           backgroundColor: Theme.of(context).colorScheme.primary,
           leading: Builder(
             builder: (context) {
-              return IconButton(
+              return IconButton(iconSize: 25,
                 icon: CircleAvatar(
                   backgroundColor: Colors.white,
                 ),
@@ -45,15 +45,15 @@ class HomePageState extends State<HomePage> {
           ),
           title: Text(
             'Emp_Name',
-            style: TextStyle(color: Colors.white),
+            // style: TextStyle(color: Colors.white),
           ),
           actions: [
             IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.notifications_none_outlined,
-                size: 30,
-                color: Colors.white,
+                size: 25,
+               
               ),
             ),
             IconButton(
@@ -64,13 +64,13 @@ class HomePageState extends State<HomePage> {
                 },
                 icon: Icon(
                   themeNotifier.isDark ? Icons.light_mode : Icons.dark_mode,
-                  size: 30,
-                  color: Colors.white,
+                  size: 25,
+                  
                 )),
             IconButton(
                 icon: new Image.asset(
                   'assets/logo.png',
-                  width: 40,
+                  width: 35,
                 ),
                 onPressed: () { selectedPage!=0 ?
                   (Navigator.push(
@@ -97,42 +97,42 @@ class HomePageState extends State<HomePage> {
                 selectedPage = index;
               });
             },
-            height: 65,
+            height: 57,
             color: Theme.of(context).colorScheme.primary,
             // color: Color.fromRGBO(191, 58, 74, 1),
             items: [
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.home_outlined,
-                    size: 30,
+                    size: 25,
                     color: Colors.white,
                   ),
                   label: 'Home',
-                  labelStyle: TextStyle(color: Colors.white)),
+                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.edit,
-                    size: 30,
+                    size: 25,
                     color: Colors.white,
                   ),
                   label: 'Override',
-                  labelStyle: TextStyle(color: Colors.white)),
+                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.history,
-                    size: 30,
+                    size: 25,
                     color: Colors.white,
                   ),
                   label: 'History',
-                  labelStyle: TextStyle(color: Colors.white)),
+                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.group,
-                    size: 30,
+                    size: 25,
                     color: Colors.white,
                   ),
                   label: 'My Team',
-                  labelStyle: TextStyle(color: Colors.white)),
+                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
             ]),
 
         body: Container(
