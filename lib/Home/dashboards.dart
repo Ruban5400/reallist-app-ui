@@ -46,13 +46,12 @@ class _TabBarPageState extends State<TabBarPage>
                 child: TabBar(
                   labelPadding: EdgeInsets.all(0),
                   indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      25,
-                    ),
+                    borderRadius: BorderRadius.circular(25),
                     color: Theme.of(context).colorScheme.primary,
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,
+                  dividerColor: Colors.transparent,
                   controller: tabController,
                   tabs: [
                     Container(
