@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         child: Consumer(
           builder: (context, ThemeModel themeNotifier, child) {
             return MaterialApp(
-              title: 'Real_list app',
+              title: 'Real_list mobile app',
               // Light and Dark theme
               // theme: ThemeData(brightness: Brightness.light),
               // darkTheme: ThemeData(brightness: Brightness.dark),
