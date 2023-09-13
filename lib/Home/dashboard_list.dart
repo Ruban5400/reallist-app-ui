@@ -118,7 +118,7 @@ class _DashboardListState extends State<DashboardList> {
   final PageController _pageController =
       PageController(viewportFraction: 0.55, keepPage: true, initialPage: 1);
 
-  List<String> imagesUrl = [
+  List<String> heads = [
     'Total',
     'Completed',
     'Assigned',
@@ -137,7 +137,7 @@ class _DashboardListState extends State<DashboardList> {
             height: 125,
             child: PageView.builder(
               controller: _pageController,
-              itemCount: imagesUrl.length,
+              itemCount: heads.length,
               itemBuilder: (_, index) => AnimatedBuilder(
                 animation: _pageController,
                 builder: (context, child) {
@@ -151,7 +151,7 @@ class _DashboardListState extends State<DashboardList> {
                     child: Container(
                       // width: MediaQuery.of(context).size.width * 0.6,
 
-                      margin: EdgeInsets.only(left: 15, bottom: 10,top: 15),
+                      margin: EdgeInsets.only(left: 15, bottom: 10, top: 15),
                       padding: new EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -169,7 +169,7 @@ class _DashboardListState extends State<DashboardList> {
                         // mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Text(
-                            '${imagesUrl[index]}',
+                            '${heads[index]}',
                             style: TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.w500),
                             textAlign: TextAlign.center,
@@ -220,7 +220,6 @@ class _DashboardListState extends State<DashboardList> {
                                   ),
                                 ],
                               ),
-                              
                             ],
                           ),
                         ],
@@ -231,31 +230,15 @@ class _DashboardListState extends State<DashboardList> {
               ),
             ),
           ),
-
-          // Column(
-          //   crossAxisAlignment: CrossAxisAlignment.center,
-          //   children: [
-          //     SmoothPageIndicator(
-          //       controller: _pageController, // PageController
-          //       count: imagesUrl.length,
-          //       effect: JumpingDotEffect(
-          //         verticalOffset: 10,
-          //         dotHeight: 6,
-          //         activeDotColor: Theme.of(context).colorScheme.primary,
-          //       ), // your preferred effect
-          //       onDotClicked: (index) {},
-          //     ),
-          //   ],
-          // ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SmoothPageIndicator(
                 controller: _pageController, // PageController
-                count: imagesUrl.length,
+                count: heads.length,
                 effect: SwapEffect(
                   dotHeight: 6,
-                  activeDotColor:  Theme.of(context).colorScheme.primary,
+                  activeDotColor: Theme.of(context).colorScheme.primary,
                   type: SwapType.yRotation,
                 ), // your preferred effect
                 onDotClicked: (index) {},
