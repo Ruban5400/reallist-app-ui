@@ -15,7 +15,6 @@ class DashboardList extends StatelessWidget {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        // Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (int i = 0; i < 6; i++)
           Container(
             width: MediaQuery.of(context).size.width * 0.442,
@@ -41,22 +40,18 @@ class DashboardList extends StatelessWidget {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
-               
                 Divider(height: 10),
-                
                 Row(
                   children: [
                     Column(
                       children: [
                         Row(
                           children: [
-                            Icon(
-                              Icons.checklist,
-                              size: 18,color: Colors.grey
-                            ),
+                            Icon(Icons.checklist, size: 18, color: Colors.grey),
                             Text(
                               'Checklist',
-                              style: TextStyle(fontSize: 14,color: Colors.grey),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.grey),
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -73,13 +68,12 @@ class DashboardList extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Icon(
-                              Icons.my_location,
-                              size: 18,color: Colors.grey
-                            ),
+                            Icon(Icons.my_location,
+                                size: 18, color: Colors.grey),
                             Text(
                               'Spot',
-                              style: TextStyle(fontSize: 14,color: Colors.grey),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.grey),
                               textAlign: TextAlign.center,
                             ),
                           ],

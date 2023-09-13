@@ -44,7 +44,7 @@ class HomePageState extends State<HomePage> {
             },
           ),
           title: Text(
-            'Emp_Name',
+            'Dr. Anusha',
             style: TextStyle(fontWeight: FontWeight.w200,fontSize: 20),
           ),
           actions: [
