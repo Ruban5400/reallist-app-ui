@@ -11,11 +11,11 @@ class Home extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.22,
+          height: MediaQuery.of(context).size.height * 0.30,
           child: TabBarPage(),
         ),
         Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
+            margin: EdgeInsets.only(top: 5,bottom: 30),
             height: 150,
             width: 150,
             child: Icon(

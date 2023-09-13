@@ -28,9 +28,8 @@ class _TabBarPageState extends State<TabBarPage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.01),
-      body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height* 0.23,
+      body:  Container(
+          height: MediaQuery.of(context).size.height* 0.26,
           // height: 180,
           child: Column(
             children: [
@@ -91,7 +90,7 @@ class _TabBarPageState extends State<TabBarPage>
             ],
           ),
         ),
-      ),
+      
     );
   }
 }
