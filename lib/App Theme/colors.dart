@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:reallist/App%20Theme/theme_preference.dart';
 
 class ThemeClass {
-  Color lightPrimaryColor = Color(0xFFBF3A4A);
-  //  Color lightPrimaryColor = Color(0xFFBE3232);
+  // Color lightPrimaryColor = Color(0xFFBF3A4A);
+   Color lightPrimaryColor = Color(0xFFBE0032);
   Color darkPrimaryColor = Color(0xFF00A99D);
 
   static ThemeData crimsonTheme = ThemeData(
