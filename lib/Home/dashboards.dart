@@ -30,8 +30,8 @@ class _TabBarPageState extends State<TabBarPage>
       backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.01),
       body: SingleChildScrollView(
         child: Container(
-          // height: MediaQuery.of(context).size.height,
-          height: 180,
+          height: MediaQuery.of(context).size.height* 0.23,
+          // height: 180,
           child: Column(
             children: [
               Container(

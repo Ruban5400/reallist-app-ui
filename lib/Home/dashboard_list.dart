@@ -19,7 +19,7 @@ class DashboardList extends StatelessWidget {
         for (int i = 0; i < 6; i++)
           Container(
             width: MediaQuery.of(context).size.width * 0.442,
-            margin: EdgeInsets.only(left: 15, bottom: 5),
+            margin: EdgeInsets.only(left: 15, bottom: 10),
             padding: new EdgeInsets.all(12.0),
             decoration: BoxDecoration(
               color: Colors.white,
