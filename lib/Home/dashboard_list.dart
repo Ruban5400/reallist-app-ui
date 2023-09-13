@@ -18,7 +18,7 @@ class DashboardList extends StatelessWidget {
         // Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (int i = 0; i < 6; i++)
           Container(
-            width: 174,
+            width: MediaQuery.of(context).size.width * 0.442,
             margin: EdgeInsets.only(left: 15, bottom: 5),
             padding: new EdgeInsets.all(12.0),
             decoration: BoxDecoration(
@@ -52,7 +52,7 @@ class DashboardList extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.checklist,
-                              size: 20,color: Colors.grey
+                              size: 18,color: Colors.grey
                             ),
                             Text(
                               'Checklist',
@@ -75,7 +75,7 @@ class DashboardList extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.my_location,
-                              size: 20,color: Colors.grey
+                              size: 18,color: Colors.grey
                             ),
                             Text(
                               'Spot',

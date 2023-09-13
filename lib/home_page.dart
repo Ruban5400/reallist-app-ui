@@ -35,7 +35,7 @@ class HomePageState extends State<HomePage> {
           backgroundColor: Theme.of(context).colorScheme.primary,
           leading: Builder(
             builder: (context) {
-              return IconButton(iconSize: 25,
+              return IconButton(
                 icon: CircleAvatar(
                   backgroundColor: Colors.white,
                 ),
@@ -45,7 +45,7 @@ class HomePageState extends State<HomePage> {
           ),
           title: Text(
             'Emp_Name',
-            style: TextStyle(fontWeight: FontWeight.w100,fontSize: 19),
+            style: TextStyle(fontWeight: FontWeight.w200,fontSize: 20),
           ),
           actions: [
             IconButton(

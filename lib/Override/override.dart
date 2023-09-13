@@ -19,7 +19,7 @@ class Override extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -96,7 +96,7 @@ class Override extends StatelessWidget {
                     'Override details',
                     style: TextStyle(
                         // color: Theme.of(context).colorScheme.primary,
-                        fontSize: 20),
+                        fontSize: 16),
                   ),
                 ),
               ],

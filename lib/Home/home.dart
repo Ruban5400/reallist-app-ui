@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
           percent: 40 / 100,
           center: Text(
             "40%",
-            style: const TextStyle(fontSize: 11),
+            style: const TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
           ),
           barRadius: const Radius.circular(50),
           progressColor: Theme.of(context).colorScheme.primary,

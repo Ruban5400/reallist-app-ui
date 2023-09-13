@@ -19,18 +19,19 @@ class SpotDetails extends StatelessWidget {
           Icon(Icons.keyboard_double_arrow_down_rounded),
           Text(
             'Spot name',
-            style: TextStyle(fontSize: 18,color: Colors.white),
+            style: TextStyle(fontSize: 16,color: Colors.white),
           ),
+          Spacer(),
           Row(
             children: [
               Text(
                 'Created by',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 16),
               ),
               Spacer(),
               Text(
                 'Time',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 16),
               ),
             ],
           ),
@@ -38,12 +39,12 @@ class SpotDetails extends StatelessWidget {
             children: [
               Text(
                 'Name',
-                style: TextStyle(fontSize: 18,color: Colors.white),
+                style: TextStyle(fontSize: 16,color: Colors.white),
               ),
               Spacer(),
               Text(
                 'Time',
-                style: TextStyle(fontSize: 18,color: Colors.white),
+                style: TextStyle(fontSize: 16,color: Colors.white),
               ),
             ],
           ),

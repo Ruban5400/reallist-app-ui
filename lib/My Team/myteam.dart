@@ -19,7 +19,7 @@ class MyTeam extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
             ),

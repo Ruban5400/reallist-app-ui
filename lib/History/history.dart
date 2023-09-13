@@ -15,11 +15,11 @@ class History extends StatelessWidget {
               alignment: Alignment.center,
               height: 45,
               child: Text(
-                'History',
+                'HISTORY',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -96,7 +96,7 @@ class History extends StatelessWidget {
                     'History details',
                     style: TextStyle(
                         // color: Theme.of(context).colorScheme.primary,
-                        fontSize: 20),
+                        fontSize: 16),
                   ),
                 ),
               ],
