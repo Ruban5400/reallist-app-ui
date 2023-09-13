@@ -3,7 +3,7 @@ import 'package:reallist/App%20Theme/theme_preference.dart';
 
 class ThemeClass {
   // Color lightPrimaryColor = Color(0xFFBF3A4A);
-   Color lightPrimaryColor = Color(0xFFDA525F);
+   Color lightPrimaryColor = Color(0xFFDF6C77);
   Color darkPrimaryColor = Color(0xFF00A99D);
 
   static ThemeData crimsonTheme = ThemeData(
