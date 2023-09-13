@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.25,
+          height: MediaQuery.of(context).size.height * 0.23,
           child: TabBarPage(),
         ),
         Container(
@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
         ),
         Container(
           // height: 185,
-          height: MediaQuery.of(context).size.height * 0.15,
+          height: MediaQuery.of(context).size.height * 0.14,
           child: CheckList(),
         ),
       ],

@@ -28,7 +28,7 @@ class CheckList extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.navigate_next,
-              size: 30,
+              size: 25,
               // color: Colors.white,
             ),
             onPressed: () {

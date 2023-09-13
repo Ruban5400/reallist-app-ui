@@ -41,9 +41,9 @@ class DashboardList extends StatelessWidget {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
-                Spacer(),
-                Divider(height: 2),
-                Spacer(),
+               
+                Divider(height: 10),
+                
                 Row(
                   children: [
                     Column(
