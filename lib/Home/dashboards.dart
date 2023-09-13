@@ -29,7 +29,7 @@ class _TabBarPageState extends State<TabBarPage>
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.01),
       body:  Container(
-          height: MediaQuery.of(context).size.height* 0.26,
+          height: MediaQuery.of(context).size.height* 0.3,
           // height: 180,
           child: Column(
             children: [
