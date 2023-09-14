@@ -9,7 +9,7 @@ class DB_Checklist extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 25),
+        padding: EdgeInsets.only(top: 40),
         child: Column(
           children: [
             Container(
