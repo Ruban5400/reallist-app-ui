@@ -28,69 +28,68 @@ class _TabBarPageState extends State<TabBarPage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.01),
-      body:  Container(
-          height: MediaQuery.of(context).size.height* 0.3,
-          // height: 180,
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(
-                    25,
-                  ),
-                ),
-                child: TabBar(
-                  labelPadding: EdgeInsets.all(0),
-                  indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                  labelColor: Colors.white,
-                  unselectedLabelColor: Colors.black,
-                  dividerColor: Colors.transparent,
-                  controller: tabController,
-                  tabs: [
-                    Container(
-                      width: 250,
-                      child: Tab(
-                        child: Text(
-                          'Dashboard',
-                          style: TextStyle(
-                            fontSize: 18, // Adjust the font size as needed
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 250,
-                      child: Tab(
-                        child: Text(
-                          'My Dashboard',
-                          style: TextStyle(
-                            fontSize: 18, // Adjust the font size as needed
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+      body: Container(
+        height: MediaQuery.of(context).size.height * 0.3,
+        // height: 180,
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(
+                  25,
                 ),
               ),
-              Expanded(
-                child: TabBarView(
-                  controller: tabController,
-                  children: [
-                    DashboardList(),
-                    DashboardList(),
-                  ],
+              child: TabBar(
+                labelPadding: EdgeInsets.all(0),
+                indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Theme.of(context).colorScheme.primary,
                 ),
-              )
-            ],
-          ),
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.black,
+                dividerColor: Colors.transparent,
+                controller: tabController,
+                tabs: [
+                  Container(
+                    width: 250,
+                    child: Tab(
+                      child: Text(
+                        'Dashboard',
+                        style: TextStyle(
+                          fontSize: 18, // Adjust the font size as needed
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 250,
+                    child: Tab(
+                      child: Text(
+                        'My Dashboard',
+                        style: TextStyle(
+                          fontSize: 18, // Adjust the font size as needed
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: tabController,
+                children: [
+                  DashboardList(),
+                  DashboardList(),
+                ],
+              ),
+            )
+          ],
         ),
-      
+      ),
     );
   }
 }

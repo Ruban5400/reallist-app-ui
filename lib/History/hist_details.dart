@@ -34,9 +34,9 @@ class HistDetails extends StatelessWidget {
                   Text(
                     'List-history',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
                   ),
                   IconButton(
                     icon: Icon(

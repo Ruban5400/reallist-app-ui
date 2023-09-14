@@ -31,7 +31,8 @@ class HomePageState extends State<HomePage> {
       return Scaffold(
         drawer: Nav_Bar(),
         // AppBar - profile pic, profile name, notifications, app icon- log out
-        appBar: AppBar(foregroundColor: Colors.white,
+        appBar: AppBar(
+          foregroundColor: Colors.white,
           backgroundColor: Theme.of(context).colorScheme.primary,
           leading: Builder(
             builder: (context) {
@@ -45,7 +46,7 @@ class HomePageState extends State<HomePage> {
           ),
           title: Text(
             'Dr. Anusha',
-            style: TextStyle(fontWeight: FontWeight.w200,fontSize: 20),
+            style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
           ),
           actions: [
             IconButton(
@@ -53,7 +54,6 @@ class HomePageState extends State<HomePage> {
               icon: Icon(
                 Icons.notifications_none_outlined,
                 size: 25,
-               
               ),
             ),
             IconButton(
@@ -65,20 +65,21 @@ class HomePageState extends State<HomePage> {
                 icon: Icon(
                   themeNotifier.isDark ? Icons.light_mode : Icons.dark_mode,
                   size: 25,
-                  
                 )),
             IconButton(
                 icon: new Image.asset(
                   'assets/images/logo.png',
                   width: 35,
                 ),
-                onPressed: () { selectedPage!=0 ?
-                  (Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => HomePage(),
-                    ),
-                  )): null;
+                onPressed: () {
+                  selectedPage != 0
+                      ? (Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        ))
+                      : null;
                 }
                 // exit(0),
                 ),
@@ -108,7 +109,7 @@ class HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   label: 'Home',
-                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.edit,
@@ -116,7 +117,7 @@ class HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   label: 'Override',
-                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.history,
@@ -124,7 +125,7 @@ class HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   label: 'History',
-                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 12)),
               CurvedNavigationBarItem(
                   child: Icon(
                     Icons.group,
@@ -132,7 +133,7 @@ class HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   label: 'My Team',
-                  labelStyle: TextStyle(color: Colors.white,fontSize: 12)),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 12)),
             ]),
 
         body: Container(

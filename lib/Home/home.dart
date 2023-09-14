@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           child: TabBarPage(),
         ),
         Container(
-            margin: EdgeInsets.only(top: 5,bottom: 30),
+            margin: EdgeInsets.only(top: 5, bottom: 30),
             height: 150,
             width: 150,
             child: Icon(
@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
           percent: 40 / 100,
           center: Text(
             "40%",
-            style: const TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           ),
           barRadius: const Radius.circular(50),
           progressColor: Theme.of(context).colorScheme.primary,

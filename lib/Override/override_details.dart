@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:reallist/Override/override.dart';
 import 'package:reallist/home_page.dart';
 
 class OR_Details extends StatelessWidget {
@@ -35,9 +34,9 @@ class OR_Details extends StatelessWidget {
                   Text(
                     'List-override',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
                   ),
                   IconButton(
                     icon: Icon(

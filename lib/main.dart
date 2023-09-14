@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return ChangeNotifierProvider(
         create: (_) => ThemeModel(),
         child: Consumer(
@@ -25,8 +24,9 @@ class MyApp extends StatelessWidget {
               // themeMode: ThemeMode.light,
 
               // ignore: dead_code
-              theme: themeNotifier.isDark ? ThemeClass.crimsonTheme : ThemeClass.tealTheme,
-             
+              theme: themeNotifier.isDark
+                  ? ThemeClass.crimsonTheme
+                  : ThemeClass.tealTheme,
 
               home: HomePage(),
               debugShowCheckedModeBanner: false,

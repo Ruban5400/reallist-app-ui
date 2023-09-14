@@ -14,12 +14,12 @@ class SpotDetails extends StatelessWidget {
         children: [
           Text(
             'Checklist_name',
-            style: TextStyle(fontSize: 18,color: Colors.white),
+            style: TextStyle(fontSize: 18, color: Colors.white),
           ),
           Icon(Icons.keyboard_double_arrow_down_rounded),
           Text(
             'Spot name',
-            style: TextStyle(fontSize: 16,color: Colors.white),
+            style: TextStyle(fontSize: 16, color: Colors.white),
           ),
           Spacer(),
           Row(
@@ -39,12 +39,12 @@ class SpotDetails extends StatelessWidget {
             children: [
               Text(
                 'Name',
-                style: TextStyle(fontSize: 16,color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.white),
               ),
               Spacer(),
               Text(
                 'Time',
-                style: TextStyle(fontSize: 16,color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.white),
               ),
             ],
           ),

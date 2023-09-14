@@ -21,7 +21,8 @@ class _Nav_BarState extends State<Nav_Bar> {
               backgroundColor: Colors.white,
             ),
           ),
-          Theme( data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+          Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
             child: ExpansionTile(
               title: Text("Profile"),
               leading: Icon(Icons.badge_outlined), //add icon
@@ -32,8 +33,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.person,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('Dr. Anusha'),
@@ -44,8 +47,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.pin,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('114357'),
@@ -56,8 +61,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.phone,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('9932080422'),
@@ -68,8 +75,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.stream,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('Medical Services'),
@@ -80,8 +89,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.lan_outlined,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('Clinical Support'),
@@ -92,8 +103,10 @@ class _Nav_BarState extends State<Nav_Bar> {
                   children: [
                     Icon(
                       Icons.location_on,
-                      color:
-                          Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withOpacity(0.7),
                     ),
                     SizedBox(width: 10),
                     Text('KCH'),
@@ -103,7 +116,8 @@ class _Nav_BarState extends State<Nav_Bar> {
               ],
             ),
           ),
-          Theme( data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+          Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
             child: ExpansionTile(
               title: Text("Settings"),
               leading: Icon(Icons.settings_outlined), //add icon
