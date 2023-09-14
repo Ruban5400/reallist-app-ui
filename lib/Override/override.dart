@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reallist/Override/override_details.dart';
 
 class Override extends StatelessWidget {
   const Override({super.key});
@@ -77,7 +78,7 @@ class Override extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 50,
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(8),
                   margin: EdgeInsets.only(top: 15),
                   alignment: Alignment.centerLeft,
                   decoration: BoxDecoration(
@@ -92,12 +93,24 @@ class Override extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Text(
-                    'Override details',
-                    style: TextStyle(
-                        // color: Theme.of(context).colorScheme.primary,
-                        fontSize: 16),
-                  ),
+                  child: TextButton(
+                          style: TextButton.styleFrom(
+                            textStyle: const TextStyle(fontSize: 16),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => OR_Details(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Over-ride details',
+                            style: TextStyle(
+                             color: Colors.black,                            ),
+                          ),
+                        ),
                 ),
               ],
             ),
