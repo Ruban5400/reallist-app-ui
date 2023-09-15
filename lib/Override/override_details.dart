@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:reallist/home_page.dart';
 
 class OR_Details extends StatelessWidget {
   const OR_Details({super.key});
