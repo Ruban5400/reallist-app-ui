@@ -16,7 +16,7 @@ class Override extends StatelessWidget {
               alignment: Alignment.center,
               height: 45,
               child: Text(
-                'Override',
+                'OVERRIDE',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,

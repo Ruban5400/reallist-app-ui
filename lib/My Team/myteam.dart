@@ -13,9 +13,9 @@ class MyTeam extends StatelessWidget {
           child: Stack(children: [
             Container(
               alignment: Alignment.center,
-              height: 45,
+              height: 48,
               child: Text(
-                'My Team',
+                'MY TEAM',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
