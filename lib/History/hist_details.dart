@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reallist/home_page.dart';
+
 
 class HistDetails extends StatelessWidget {
   const HistDetails({super.key});
