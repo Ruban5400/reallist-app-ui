@@ -61,7 +61,7 @@ class SpotList extends StatelessWidget {
                   isScrollControlled: true,
                   builder: (context) => Container(
                     // margin: EdgeInsets.all(20),
-                    height: MediaQuery.of(context).size.height * 0.3,
+                    height: MediaQuery.of(context).size.height * 0.35,
                     decoration: new BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: new BorderRadius.all(
