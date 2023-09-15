@@ -23,11 +23,8 @@ class OR_Details extends StatelessWidget {
                       color: Colors.white,
                     ),
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pop(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ),
                       );
                     },
                   ),
