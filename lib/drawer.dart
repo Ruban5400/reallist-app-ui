@@ -145,7 +145,7 @@ class _Nav_BarState extends State<Nav_Bar> {
           ),
           Container(
             alignment: Alignment.bottomCenter,
-            height: MediaQuery.of(context).size.height * 0.57,
+            height: MediaQuery.of(context).size.height * 0.55,
             child: ListTile(
               title: Text(
                 'App Version 0.0.1',

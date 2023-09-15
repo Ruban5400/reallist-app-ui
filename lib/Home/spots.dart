@@ -59,18 +59,14 @@ class SpotList extends StatelessWidget {
                 showModalBottomSheet(
                   context: context,
                   isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
                   builder: (context) => Container(
-                    height: MediaQuery.of(context).size.height * 0.35,
-                    padding: EdgeInsets.all(10),
-
-                    // decoration: new BoxDecoration(
-                    //   color: Colors.white,
-                    //   borderRadius: new BorderRadius.only(
-                    //     topLeft: const Radius.circular(25.0),
-                    //     topRight: const Radius.circular(25.0),
-                    //   ),
-                    // ),
+                    // margin: EdgeInsets.all(20),
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    decoration: new BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: new BorderRadius.all(
+                          Radius.circular(30),
+                        )),
                     child: SpotDetails(),
                   ),
                 );
