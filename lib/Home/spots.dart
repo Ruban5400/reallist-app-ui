@@ -63,10 +63,12 @@ class SpotList extends StatelessWidget {
                     // margin: EdgeInsets.all(20),
                     height: MediaQuery.of(context).size.height * 0.35,
                     decoration: new BoxDecoration(
-                        color: Color(0xFFffffff).withOpacity(1),
-                        borderRadius: new BorderRadius.all(
-                          Radius.circular(30),
-                        )),
+                        color: Color.fromRGBO(117, 117, 117, 0.0).withOpacity(1),
+                        borderRadius: new BorderRadius.only(
+                          topLeft: Radius.circular(25),
+                          topRight: Radius.circular(25)
+                        ),
+                        ),
                     child: SpotDetails(),
                   ),
                 );
