@@ -96,6 +96,12 @@ flutter:
           style: italic
         - asset: assets/fonts/Ubuntu-Bold.ttf
           weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          style: italic
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 600
     # - family: RobotoMono
     #   fonts:
     #     - asset: fonts/RobotoMono-Regular.ttf

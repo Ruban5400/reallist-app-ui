@@ -9,14 +9,14 @@ class ThemeClass {
 
   static ThemeData crimsonTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Ubuntu',
+    fontFamily: 'Poppins',
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.lightPrimaryColor),
   );
 
   static ThemeData tealTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Ubuntu',
+    fontFamily: 'Montserrat',
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.darkPrimaryColor),
   );
