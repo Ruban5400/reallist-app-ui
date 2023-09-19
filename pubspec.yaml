@@ -99,8 +99,12 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Light.ttf
-          style: italic
         - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 600
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Light.ttf
+        - asset: assets/fonts/Nunito-Medium.ttf
           weight: 600
     # - family: RobotoMono
     #   fonts:

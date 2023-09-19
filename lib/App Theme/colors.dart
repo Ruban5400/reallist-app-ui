@@ -9,7 +9,7 @@ class ThemeClass {
 
   static ThemeData crimsonTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Poppins',
+    fontFamily: 'Nunito',
     colorScheme: const ColorScheme.light()
         .copyWith(primary: _themeClass.lightPrimaryColor),
   );
