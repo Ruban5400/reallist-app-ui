@@ -33,7 +33,7 @@ class HomePageState extends State<HomePage> {
         // AppBar - profile pic, profile name, notifications, app icon- log out
         appBar: AppBar(
           foregroundColor: Colors.white,
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.8),
           leading: Builder(
             builder: (context) {
               return IconButton(
@@ -46,7 +46,7 @@ class HomePageState extends State<HomePage> {
           ),
           title: Text(
             'Dr. Anusha',
-            style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
           ),
           actions: [
             IconButton(
@@ -84,13 +84,14 @@ class HomePageState extends State<HomePage> {
                 // exit(0),
                 ),
           ],
+          
         ),
 
         // Bottom nav bar - Home, Override, History, My Team
         bottomNavigationBar: CurvedNavigationBar(
             index: selectedPage,
             backgroundColor:
-                Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                Colors.grey.withOpacity(0.1),
 
             //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
             onTap: (index) {
@@ -99,7 +100,7 @@ class HomePageState extends State<HomePage> {
               });
             },
             height: 57,
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.primary.withOpacity(0.8),
             // color: Color.fromRGBO(191, 58, 74, 1),
             items: [
               CurvedNavigationBarItem(
@@ -137,7 +138,7 @@ class HomePageState extends State<HomePage> {
             ]),
 
         body: Container(
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+            color: Colors.grey[100],
             width: double.infinity,
             height: double.infinity,
             child: Screens[selectedPage]),

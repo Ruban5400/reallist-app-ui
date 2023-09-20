@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
             child: Icon(
               Icons.qr_code_scanner,
               size: 150,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
             )),
         LinearPercentIndicator(
           padding: const EdgeInsets.symmetric(horizontal: 15),
