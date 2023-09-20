@@ -27,7 +27,7 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.grey[200],
       body: Container(
         height: MediaQuery.of(context).size.height * 0.3,
         // height: 180,
@@ -46,7 +46,7 @@ class _TabBarPageState extends State<TabBarPage>
                 labelPadding: EdgeInsets.all(0),
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
                 ),
                 labelColor: Theme.of(context).colorScheme.primary,
                 unselectedLabelColor: Colors.black,

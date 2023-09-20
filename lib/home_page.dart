@@ -91,7 +91,7 @@ class HomePageState extends State<HomePage> {
         bottomNavigationBar: CurvedNavigationBar(
             index: selectedPage,
             backgroundColor:
-                Colors.grey.withOpacity(0.1),
+                Colors.grey.withOpacity(0.2),
 
             //backgroundColor: Color.fromRGBO(191, 58, 74, 1).withOpacity(.1),
             onTap: (index) {
@@ -138,7 +138,7 @@ class HomePageState extends State<HomePage> {
             ]),
 
         body: Container(
-            color: Colors.grey[100],
+            color: Colors.grey[200],
             width: double.infinity,
             height: double.infinity,
             child: Screens[selectedPage]),
