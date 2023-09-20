@@ -56,16 +56,16 @@ class HomePageState extends State<HomePage> {
                 size: 25,
               ),
             ),
-            IconButton(
-                onPressed: () {
-                  themeNotifier.isDark
-                      ? themeNotifier.isDark = false
-                      : themeNotifier.isDark = true;
-                },
-                icon: Icon(
-                  themeNotifier.isDark ? Icons.light_mode : Icons.dark_mode,
-                  size: 25,
-                )),
+            // IconButton(
+            //     onPressed: () {
+            //       themeNotifier.isDark
+            //           ? themeNotifier.isDark = false
+            //           : themeNotifier.isDark = true;
+            //     },
+            //     icon: Icon(
+            //       themeNotifier.isDark ? Icons.light_mode : Icons.dark_mode,
+            //       size: 25,
+            //     )),
             IconButton(
                 icon: new Image.asset(
                   'assets/images/logo.png',
